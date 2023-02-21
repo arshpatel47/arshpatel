@@ -21,6 +21,8 @@
   <!-- Theme color -->
   <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
 
+  <!-- Animation  css -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Main style sheet -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -119,7 +121,7 @@
                   class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="founder.html">Founder</a></li>
-                <li><a href="course-detail.html">School</a></li>
+                <li><a href="school_detail.html">School</a></li>
                 <li><a href="faculty.html">Faculty</a></li>
                 <li><a href="trust.html">Trust</a></li>
               </ul>
@@ -137,7 +139,7 @@
             <li><a href="admission.html" class="Addmission_btn"
                 style="color: rgb(255, 255, 255); border-radius: 0px 0px 15px 15px; height: 60px; background-color: #01bafd">Admission</a>
             </li>
-            <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
+            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -264,7 +266,7 @@
         <div class="col-md-12">
           <div class="mu-about-us-area">
             <div class="row">
-              <div class="col-lg-6 col-md-6">
+              <div class="col-lg-6 col-md-6" data-aos="fade-right" data-aos-duration="4000">
                 <div class="mu-about-us-left">
                   <!-- Start Title -->
                   <div class="mu-title">
@@ -283,7 +285,7 @@
                       </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6">
+              <div class="col-lg-6 col-md-6" data-aos="fade-left" data-aos-duration="4000">
                 <div class="mu-about-us-right ">
                   <iframe class="AB_YT_VIDEO" width="100%" height="315" src="https://www.youtube.com/embed/vzcz-x_JQF0" title="About_school" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                   </a>
@@ -643,7 +645,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
+          
           <div class="mu-testimonial-area">
+            
             <div id="mu-testimonial-slide" class="mu-testimonial-content">
               <!-- start testimonial single item -->
               <div class="mu-testimonial-item">
@@ -926,6 +930,10 @@
 
   <script>@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");</script>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   
 
 </body>
