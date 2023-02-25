@@ -7,4 +7,4 @@ $(document).ready(function() {
         $('#preloader').delay(1000).queue(function() {
           $(this).remove();
         });}
-    }, 5000);});
+    }, 5500);});
