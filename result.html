@@ -36,6 +36,55 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .data{
+        display: none;
+      }
+      select {
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0!important;
+   background: #5c6664;
+   background-image: none;
+   flex: 1;
+   padding: 0 .5em;
+   color:#fff;
+   cursor:pointer;
+   font-size: 1em;
+   font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+   display: none;
+}
+.select {
+   position: relative;
+   display: flex;
+   width: 20em;
+   height: 3em;
+   line-height: 3;
+   background: #5c6664;
+   overflow: hidden;
+   border-radius: .25em;
+}
+.select::after {
+   content: '\25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   background:#01bafd;
+   cursor:pointer;
+   pointer-events:none;
+   transition:.25s all ease;
+}
+.select:hover::after {
+   color:white;
+}
+    </style>
 
   </head>
   <body>
@@ -193,6 +242,8 @@
      </div>
    </div>
  </section>
+
+
  <!-- End breadcrumb -->
  <section id="mu-course-content">
    <div class="container">
@@ -208,16 +259,201 @@
                         <div style="text-align: center;">
 
                             <h2>Results</h2>
-                            <h3>- 10<sup>th</sup> 2022 -</h3>
-                        </div>
-                        <img   src="img_result/new result.jpg" width="100%" alt="result_2k22">
+                            <h3>Select Your Class</h3>
+                            
+                            
+                          <br>
 
-                        <div style="text-align: center;">
+                          <center>
 
-                          
-                          <h3>- 11<sup>th</sup>&  12<sup>th</sup>Science -</h3>
-                      </div>
-                      <img   src="img_result/ASHISH VIDHYALY OK.jpg" width="100%" alt="result_2k22">
+                            <div class="select" >
+                              <select name="" onchange="showMe(this.value);" >
+                                <option selected disabled>Select Class:</option>
+                                <option value="9th">Class 9<sup>th</sup></option>
+                                <option value="10th">Class 10<sup>th</sup></option>
+                                <option value="10th_2k22">Class 10<sup>th 2k22 Board Result</sup></option>
+                                <option value="11th_arts">Class 11<sup>th</sup> Arts</option>
+                                <option value="11th_commerce">Class 11<sup>th</sup> Commerce</option>
+                                <option value="11th_science">Class 11<sup>th</sup> Science</option>
+                                <option value="12th_arts">Class 12<sup>th</sup> Arts</option>
+                                <option value="11th_commerce">Class 12<sup>th</sup> Commerce</option>
+                                <option value="12th_science">Class 12<sup>th</sup> Science</option>
+                              </select>
+                            </div>
+                            
+                          </center>
+                            <!-- <form name="dropForm">
+                              <select name="" onchange="showMe(this.value);" >
+                                 <option value="none">Select Class:</option>
+                                 <option value="9th">Class 9<sup>th</sup></option>
+                                 <option value="10th">Class 10<sup>th</sup></option>
+                                 <option value="10th_2k22">Class 10<sup>th 2k22 Board Result</sup></option>
+                                 <option value="11th_arts">Class 11<sup>th</sup> Arts</option>
+                                 <option value="11th_commerce">Class 11<sup>th</sup> Commerce</option>
+                                 <option value="11th_science">Class 11<sup>th</sup> Science</option>
+                                 <option value="12th_arts">Class 12<sup>th</sup> Arts</option>
+                                 <option value="11th_commerce">Class 12<sup>th</sup> Commerce</option>
+                                 <option value="12th_science">Class 12<sup>th</sup> Science</option>
+                              </select>
+                           </form> -->
+                          <br>
+                           <!-- 9th result start -->
+                            <div id="9th_table" style="display: none; overflow-x:auto ;">
+                              <table>
+                                <tr>
+                                  <th>Company</th>
+                                  <th>Contact</th>
+                                  <th>Country</th>
+                                </tr>
+                                <tr>
+                                  <td>Alfreds Futterkiste</td>
+                                  <td>Maria Anders</td>
+                                  <td>Germany</td>
+                                </tr>
+                                <tr>
+                                  <td>Centro comercial Moctezuma</td>
+                                  <td>Francisco Chang</td>
+                                  <td>Mexico</td>
+                                </tr>
+                                <tr>
+                                  <td>Ernst Handel</td>
+                                  <td>Roland Mendel</td>
+                                  <td>Austria</td>
+                                </tr>
+                                <tr>
+                                  <td>Island Trading</td>
+                                  <td>Helen Bennett</td>
+                                  <td>UK</td>
+                                </tr>
+                                <tr>
+                                  <td>Laughing Bacchus Winecellars</td>
+                                  <td>Yoshi Tannamuri</td>
+                                  <td>Canada</td>
+                                </tr>
+                                <tr>
+                                  <td>Magazzini Alimentari Riuniti</td>
+                                  <td>Giovanni Rovelli</td>
+                                  <td>Italy</td>
+                                </tr>
+                              </table>
+                            </div>
+
+                            <!-- 9th result start -->
+
+                            <!-- 10th result start -->
+                            <div id="10th_table" style="display: none;">
+                              <table>
+                                <tr>
+                                  <th>Company</th>
+                                  <th>Contact</th>
+                                  <th>Country</th>
+                                </tr>
+                                <tr>
+                                  <td>Alfreds Futterkiste</td>
+                                  <td>Maria Anders</td>
+                                  <td>Germany</td>
+                                </tr>
+                                <tr>
+                                  <td>Centro comercial Moctezuma</td>
+                                  <td>Francisco Chang</td>
+                                  <td>Mexico</td>
+                                </tr>
+                                <tr>
+                                  <td>Ernst Handel</td>
+                                  <td>Roland Mendel</td>
+                                  <td>Austria</td>
+                                </tr>
+                                <tr>
+                                  <td>Island Trading</td>
+                                  <td>Helen Bennett</td>
+                                  <td>UK</td>
+                                </tr>
+                                <tr>
+                                  <td>Laughing Bacchus Winecellars</td>
+                                  <td>Yoshi Tannamuri</td>
+                                  <td>Canada</td>
+                                </tr>
+                                <tr>
+                                  <td>Magazzini Alimentari Riuniti</td>
+                                  <td>Giovanjdni Rovelli</td>
+                                  <td>india!</td>
+                                </tr>
+                              </table>
+                            </div>
+                            
+                            <!-- 10th End start -->
+
+                            <!-- 10th 2k22 result start -->
+                            <div id="10th_2k22_table" style="display: none;">
+                              <img   src="img_result/new result.jpg" width="100%" alt="result_2k22">
+                            </div>
+                            
+                            <!-- 10th End start -->
+
+
+                            <!-- 11th arts result start -->
+                            <div id="11th_arts_table" style="display: none;">
+                              <p>This Time Result Not Found !</p>
+                            </div>
+                            
+                            <!-- 10th End start -->
+
+                           </div>
+                           
+                           <script>
+                            function showMe(value) {
+                              if(value == "9th")
+                              {
+                                document.getElementById('9th_table').style.display="block";
+                                document.getElementById('10th_table').style.display="none";
+                                document.getElementById('10th_2k22_table').style.display="none";
+                                document.getElementById('11th_arts_table').style.display="none";
+                                document.getElementById('11th_commerce_table').style.display="none";
+                                document.getElementById('11th_science_table').style.display="none";
+                                document.getElementById('12th_arts_table').style.display="none";
+                                document.getElementById('12th_commerce_table').style.display="none";
+                                document.getElementById('12th_science_table').style.display="none";
+                              }
+                              if(value == "10th")
+                              {
+                                document.getElementById('9th_table').style.display="none";
+                                document.getElementById('10th_table').style.display="block";
+                                document.getElementById('10th_2k22_table').style.display="none";
+                                document.getElementById('11th_arts_table').style.display="none";
+                                document.getElementById('11th_commerce_table').style.display="none";
+                                document.getElementById('11th_science_table').style.display="none";
+                                document.getElementById('12th_arts_table').style.display="none";
+                                document.getElementById('12th_commerce_table').style.display="none";
+                                document.getElementById('12th_science_table').style.display="none";
+                              }
+                              if(value == "10th_2k22")
+                              {
+                                document.getElementById('9th_table').style.display="none";
+                                document.getElementById('10th_table').style.display="none";
+                                document.getElementById('10th_2k22_table').style.display="block";
+                                document.getElementById('11th_arts_table').style.display="none";
+                                document.getElementById('11th_commerce_table').style.display="none";
+                                document.getElementById('11th_science_table').style.display="none";
+                                document.getElementById('12th_arts_table').style.display="none";
+                                document.getElementById('12th_commerce_table').style.display="none";
+                                document.getElementById('12th_science_table').style.display="none";
+                              }
+                              if(value == "11th_arts")
+                              {
+                                document.getElementById('9th_table').style.display="none";
+                                document.getElementById('10th_table').style.display="none";
+                                document.getElementById('10th_2k22_table').style.display="none";
+
+                                document.getElementById('11th_arts_table').style.display="block";
+                                document.getElementById('11th_commerce_table').style.display="none";
+                                document.getElementById('11th_science_table').style.display="none";
+                                document.getElementById('12th_arts_table').style.display="none";
+                                document.getElementById('12th_commerce_table').style.display="none";
+                                document.getElementById('12th_science_table').style.display="none";
+                              }
+                            }
+                            
+                           </script>
  
 
                     </div>
@@ -326,9 +562,20 @@
   <script src="assets/js/custom.js"></script> 
   
   <Script src="assets/js/pre_loader.js">
+
+
     
   </Script>
 
+<script>
+  $(document).ready(function(){
+    $("#name").on('change',function(){
+      $(".data").hide();
+      $("#" + $(this).val()).fadeIn(700);
+    }).change();
+  });
+
+</script>
 
   </body>
 </html>
